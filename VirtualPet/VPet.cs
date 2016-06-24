@@ -14,7 +14,7 @@ namespace VirtualPet
              Thirst
              boredom
              tiredness*/
-        public string _name;
+        private string _name;
         public string Name
         { 
             get
@@ -27,7 +27,7 @@ namespace VirtualPet
             }
 
         }
-        public int _hunger;
+        private int _hunger;
         public int Hunger
         {
             get
@@ -39,7 +39,7 @@ namespace VirtualPet
                 _hunger = value;
             }
         }
-        public int _thirst;
+        private int _thirst;
         public int Thirst
         {
             get
@@ -51,7 +51,7 @@ namespace VirtualPet
                 _thirst = value;
             }
         }
-        public int _boredom;
+        private int _boredom;
         public int Boredom
         {
             get
@@ -81,6 +81,41 @@ namespace VirtualPet
                 _hunger = 100 - 20;
             }
             
+        }
+        public void Drink()
+        {
+            _thirst = 100;
+            Console.WriteLine(Name + " has a powerful thirst on.");
+            Console.WriteLine("How many pints 1 or 2");
+            int drank = int.Parse(Console.ReadLine());
+            if (drank == 1)
+            {
+                _thirst = 100 - 10;
+                Console.WriteLine("{0} is now at {1} thirst", Name, _thirst);
+
+            }
+            if (drank == 2)
+            {
+                _thirst = 100 - 20;
+            }
+        }
+        public void Play()
+        {
+            
+            _boredom = 100;
+            Console.WriteLine(Name + "is bored");
+            Console.WriteLine("How rounds of disc golf will you play 1 or 2");
+            int _play = int.Parse(Console.ReadLine());
+            if (_play == 1)
+            {
+                _boredom = 100 - 10;
+                Console.WriteLine("{0} is now at {1} hunger", Name, _boredom);
+
+            }
+            if ( _play == 2)
+            {
+                _boredom = 100 - 20;
+            }
         }
         
         /*
