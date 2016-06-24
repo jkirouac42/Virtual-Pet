@@ -8,28 +8,30 @@ namespace VirtualPet
 {
     class VPet
     {
-       
+
         /* class animal
              Hunger
              Thirst
              boredom
              tiredness*/
-        private string petName;
+        private string _name;
         public string Name
-        {
+        { 
             get
             {
-                return petName;
+                return _name; 
             }
             set
             {
-                petName = value;
+                _name = value;
             }
-        }
-                       
+            
+        }                       
         public int Hunger { get; set; }
         public int Thirst { get; set; }
         public int Boredom { get;set;}
+        
+        
     }
 
     

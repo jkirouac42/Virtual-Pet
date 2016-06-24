@@ -9,12 +9,33 @@ namespace VirtualPet
     class Program
     {
 
-        static void NamePet()
-        {
-            
-            Console.WriteLine("Enter the name of your pet.");
-            string petName = Console.ReadLine();
 
+        static void Menu()
+        {
+            while (true)
+            {
+                Console.WriteLine("To feed your pet press 1\n");
+                Console.WriteLine("To do some thirst quenching press 2\n");
+                Console.WriteLine("To play with your pet press 3\n");
+
+                int choice = int.Parse(Console.ReadLine());
+
+                if (choice == 1)
+                {
+                    //feedPet();
+                }
+
+                if (choice == 2)
+                {
+                    //drink()
+                }
+
+                if (choice == 3)
+                {
+                    //play()
+                }
+                else break;
+            }
         }
         static void Main(string[] args)
         {
@@ -28,10 +49,14 @@ namespace VirtualPet
             do nothing
 
            */
-            Console.WriteLine("Welcome to Virtual Pet");
+            Console.WriteLine("Welcome to Virtual Pet\n");
+            
             VPet myPet = new VPet();
+            Console.WriteLine("Enter in a name for your new pet!\n");
             myPet.Name = Console.ReadLine();
-            NamePet();
+            Console.WriteLine("Congratulations! You have a new pet named {0}!\n", myPet.Name);
+            Menu();
+            Console.ReadKey();
         }
     }
 }
