@@ -8,7 +8,7 @@ namespace VirtualPet
 {
     class Program
     {
-
+       static VPet myPet = new VPet();
 
         static void Menu()
         {
@@ -19,10 +19,10 @@ namespace VirtualPet
                 Console.WriteLine("To play with your pet press 3\n");
 
                 int choice = int.Parse(Console.ReadLine());
-
+                 
                 if (choice == 1)
                 {
-                    //feedPet();
+                    myPet.Feed();  
                 }
 
                 if (choice == 2)
@@ -51,7 +51,7 @@ namespace VirtualPet
            */
             Console.WriteLine("Welcome to Virtual Pet\n");
             
-            VPet myPet = new VPet();
+           // VPet myPet = new VPet(); uneeded
             Console.WriteLine("Enter in a name for your new pet!\n");
             myPet.Name = Console.ReadLine();
             Console.WriteLine("Congratulations! You have a new pet named {0}!\n", myPet.Name);

@@ -14,7 +14,7 @@ namespace VirtualPet
              Thirst
              boredom
              tiredness*/
-        private string _name;
+        public string _name;
         public string Name
         { 
             get
@@ -25,13 +25,67 @@ namespace VirtualPet
             {
                 _name = value;
             }
+
+        }
+        public int _hunger;
+        public int Hunger
+        {
+            get
+            {
+                return _hunger;
+            }
+            set
+            {
+                _hunger = value;
+            }
+        }
+        public int _thirst;
+        public int Thirst
+        {
+            get
+            {
+                return _thirst;
+            }
+            set
+            {
+                _thirst = value;
+            }
+        }
+        public int _boredom;
+        public int Boredom
+        {
+            get
+            {
+                return _boredom;
+            }
+            set
+            {
+                _boredom = value;
+            }
+        }
+
+        public void Feed()
+        {
+            _hunger = 10;
+            Console.WriteLine( Name + "is hungry");
+            Console.WriteLine("How much do you want to feed your pet?\n 1 or 2 scooby snacks.");
+            int scooby = int.Parse(Console.ReadLine());
+            if (scooby == 1)
+            {
+                _hunger = 100 - 10;
+                Console.WriteLine("{0} is now at {1} hunger",Name, _hunger);
+                
+            }
+            if (scooby == 2)
+            {
+                _hunger = 100 - 20;
+            }
             
-        }                       
-        public int Hunger { get; set; }
-        public int Thirst { get; set; }
-        public int Boredom { get;set;}
+        }
         
-        
+        /*
+        Hunger--feed makes it go up--tick makes it go down
+        */
     }
 
     
