@@ -27,7 +27,7 @@ namespace VirtualPet
 
                 if (choice == 2)
                 {
-                    //drink()
+                    myPet.Drink();
                 }
 
                 if (choice == 3)
