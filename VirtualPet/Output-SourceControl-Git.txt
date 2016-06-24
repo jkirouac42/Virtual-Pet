@@ -1,0 +1,9 @@
+﻿Opening repositories:
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\project-summer-school
+A new Git repository has been created for you in c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPet.
+Opening repositories:
+c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPet
+Ignored file: c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPet\VirtualPet\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
+Ignored file: c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPet\VirtualPet\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+Ignored file: c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPet\VirtualPet\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+Ignored file: c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPet\VirtualPet\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
