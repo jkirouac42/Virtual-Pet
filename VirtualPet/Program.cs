@@ -8,54 +8,56 @@ namespace VirtualPet
 {
     class Program
     {
-       static VPet myPet = new VPet();
-
         static void Menu()
         {
             while (true)
             {
+                Console.WriteLine("Welcome to your Virtual Pet Fun Console\n");
                 Console.WriteLine("To feed your pet press 1\n");
                 Console.WriteLine("To do some thirst quenching press 2\n");
                 Console.WriteLine("To play with your pet press 3\n");
 
                 int choice = int.Parse(Console.ReadLine());
-                 
+
                 if (choice == 1)
                 {
-                    myPet.Feed();  
+                    myPet.Feed();
+                    Menu();
                 }
 
                 if (choice == 2)
                 {
                     myPet.Drink();
+                    Menu();
                 }
 
                 if (choice == 3)
                 {
-                    //play()
+                    myPet.Play();
+                    Menu();
                 }
                 else break;
             }
         }
+        static VPet myPet = new VPet();
+        
         static void Main(string[] args)
         {
 
-            /*Methods called in Program
-            Tick how often to call tick. Not neccesarrily time. could be Looped and tied to other methods
-            Feed
-            water
-            play
-            rest
-            do nothing
-
-           */
             Console.WriteLine("Welcome to Virtual Pet\n");
             
            // VPet myPet = new VPet(); uneeded
             Console.WriteLine("Enter in a name for your new pet!\n");
             myPet.Name = Console.ReadLine();
-            Console.WriteLine("Congratulations! You have a new pet named {0}!\n", myPet.Name);
+            Console.WriteLine("\nCongratulations! You have a new pet named {0}!\n", myPet.Name);
+            //Console.WriteLine("Press one to have fun with {0} your new Virtual Pet", myPet.Name);
+            //int getmenu = int.Parse(Console.ReadLine());
+            //if (getmenu == 1)
+            //{
+            //    return Menu();
+            //}
             Menu();
+
             Console.ReadKey();
         }
     }

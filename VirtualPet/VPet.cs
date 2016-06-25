@@ -9,11 +9,6 @@ namespace VirtualPet
     class VPet
     {
 
-        /* class animal
-             Hunger
-             Thirst
-             boredom
-             tiredness*/
         private string _name;
         public string Name
         { 
@@ -64,22 +59,29 @@ namespace VirtualPet
             }
         }
 
+        
         public void Feed()
         {
-            _hunger = 10;
-            Console.WriteLine( Name + "is hungry");
-            Console.WriteLine("How much do you want to feed your pet?\n 1 or 2 scooby snacks.");
+            _hunger = 100;
+            Console.WriteLine( Name + " is hungry\n");
+            Console.WriteLine("How much do you want to feed your pet; 1 or 2 scooby snacks.\n");
             int scooby = int.Parse(Console.ReadLine());
             if (scooby == 1)
             {
-                _hunger = 100 - 10;
-                Console.WriteLine("{0} is now at {1} hunger",Name, _hunger);
-                
+                _hunger = _hunger - 10;
+                _thirst = -_thirst + 10;
+                Console.WriteLine("That was Scoobylicious! However now {0} is mad thirsty!\n", Name);
+
+
             }
-            if (scooby == 2)
+            else if (scooby == 2)
             {
                 _hunger = 100 - 20;
+                Console.WriteLine("That was Scoobylicious! However now {0} is mad thirsty!\n", Name);
+
             }
+
+           
             
         }
         public void Drink()
@@ -97,11 +99,12 @@ namespace VirtualPet
             if (drank == 2)
             {
                 _thirst = 100 - 20;
+                Console.WriteLine("{0} is now at {1} thirst", Name, _thirst);
             }
         }
         public void Play()
         {
-            
+
             _boredom = 100;
             Console.WriteLine(Name + "is bored");
             Console.WriteLine("How rounds of disc golf will you play 1 or 2");
@@ -112,15 +115,27 @@ namespace VirtualPet
                 Console.WriteLine("{0} is now at {1} hunger", Name, _boredom);
 
             }
-            if ( _play == 2)
+            if (_play == 2)
             {
                 _boredom = 100 - 20;
+                Console.WriteLine("{0} is now at {1} hunger", Name, _boredom);
             }
         }
+        public void Tick()
+        {
+            Random random = new Random();
+
+            int num = random.Next(1, 10);
+
+            if (num >= 4)
+            {
+                
+
+            }
+
+        }
         
-        /*
-        Hunger--feed makes it go up--tick makes it go down
-        */
+        
     }
 
     
