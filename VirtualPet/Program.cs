@@ -12,10 +12,12 @@ namespace VirtualPet
         {
             while (true)
             {
-                Console.WriteLine("Welcome to your Virtual Pet Fun Console\n");
-                Console.WriteLine("To feed your pet press 1\n");
-                Console.WriteLine("To do some thirst quenching press 2\n");
-                Console.WriteLine("To play with your pet press 3\n");
+                Console.WriteLine("Welcome to your Virtual Pet Fun Console\n\n");
+                Console.WriteLine("\nTo feed your pet press 1         To feed your pet press 1\n");
+              
+                Console.WriteLine("\nTo play with your pet press 3    To check your pet's status press 4\n");
+               
+                Console.WriteLine("\nTo get some shut eye press 5\n");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -36,6 +38,16 @@ namespace VirtualPet
                     myPet.Play();
                     Menu();
                 }
+                if (choice == 4)
+                {
+                    myPet.Status();
+                    Menu();
+                }
+                if(choice == 5)
+                {
+                    myPet.Tick();
+                }
+
                 else break;
             }
         }
