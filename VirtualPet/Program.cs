@@ -12,12 +12,11 @@ namespace VirtualPet
         {
             while (true)
             {
-                Console.WriteLine("        Select a number 1-5 to raise your Virtual Pet.\n");
-                Console.WriteLine("     \nBE SURE TO KEEP YOUR VIRTUAL PETS HUNGER, THIRST, AND BOREDOM LOW! ");
+                
 
-                Console.WriteLine("\n      To FEED your pet press 1     To Quench that THIRST Press 2    \n\n      To PLAY with your pet Press 3    To check your pet's STATUS press 4\n");
+                Console.WriteLine("\nTo FEED your pet press 1\n\nTo Quench that THIRST Press 2\n\n To PLAY with your pet Press 3\n\nTo check your pet's STATUS press 4\n");
                
-                Console.WriteLine("\n          OH NO MY PETS STATS ARE OUT OF CONTROL!!\n                TAKE A CHANCE AND PRESS 5!");
+                Console.WriteLine("\nOH NO MY PETS STATS ARE OUT OF CONTROL!! TAKE A CHANCE AND PRESS 5!\n\n\n");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -65,7 +64,10 @@ namespace VirtualPet
             Console.WriteLine("                          (----)  ");
             Console.WriteLine("                         (>____<) ");
             Console.WriteLine("                         ^^ ~~ ^^   \n");
-            
+
+            Console.WriteLine("        Select a number 1-5 to raise your Virtual Pet.\n");
+            Console.WriteLine("     \nBE SURE TO KEEP YOUR VIRTUAL PETS HUNGER, THIRST, AND BOREDOM LOW! ");
+
             myPet.Status();
             Menu();
             

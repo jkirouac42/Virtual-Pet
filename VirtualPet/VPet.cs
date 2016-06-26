@@ -116,21 +116,21 @@ namespace VirtualPet
             if (_play == 1)
             {
                 _boredom = _boredom - 10;
-                _hunger = _hunger + 15;
-                _thirst = _thirst + 20;
-                Console.WriteLine("That was great! However {0} is now sleepy.", Name, _boredom);
+                _hunger = _hunger + 10;
+                _thirst = _thirst + 15;
+                Console.WriteLine("That was great!");
             }
 
             if (_play == 2)
             {
-                _boredom = _boredom - 20;
-                _hunger = _hunger + 25;
-                _thirst = _thirst + 30;
-                Console.WriteLine("That was great! However {0} is now sleepy.", Name, _boredom);
+                _boredom = _boredom - 15;
+                _hunger = _hunger + 20;
+                _thirst = _thirst + 20;
+                Console.WriteLine("That was great! ");
             }
 
             Status();
-            Tick();
+            
         }
         public void Tick()
         {
@@ -158,7 +158,7 @@ namespace VirtualPet
                 Status();
             }
 
-            else if (num >= 8)
+             if (num >= 8)
             {
                 _hunger = 100;
                 _thirst = 100;
@@ -183,11 +183,11 @@ namespace VirtualPet
             }
             if (_thirst >= 25 && _hunger < 49)
             {
-                Console.WriteLine("YOU MAY WANT TO BUY THAT PET A PINT!");
+                Console.WriteLine("\nYOU MAY WANT TO BUY THAT PET A PINT!");
             }
             if (_thirst >= 100)
             {
-                Console.WriteLine("PET IS NOW SHRIVELED LIKE A HOT DOG LEFT\nON THE COALS TOO LONG");
+                Console.WriteLine("\nPET IS NOW SHRIVELED LIKE A HOT DOG LEFT\nON THE COALS TOO LONG");
                 Console.ReadKey();
             }
             if (_boredom >= 25 && _boredom < 49)
