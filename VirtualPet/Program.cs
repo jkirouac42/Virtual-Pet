@@ -60,17 +60,14 @@ namespace VirtualPet
             Console.WriteLine("Enter in a name for your new pet!\n");
             myPet.Name = Console.ReadLine();
             Console.WriteLine("\nCongratulations! You have a new pet named {0}!\n", myPet.Name);
-            //Console.WriteLine("Press one to have fun with {0} your new Virtual Pet", myPet.Name);
-            //int getmenu = int.Parse(Console.ReadLine());
-            //if (getmenu == 1)
-            //{
-            //    return Menu();
-            //}
+            Console.WriteLine("                      @..@   ");
+            Console.WriteLine("                     (----)  ");
+            Console.WriteLine("                    (>____<) ");
+            Console.WriteLine("                    ^^ ~~ ^^   \n");
+            
             myPet.Status();
             Menu();
             
-
-
             Console.ReadKey();
         }
     }

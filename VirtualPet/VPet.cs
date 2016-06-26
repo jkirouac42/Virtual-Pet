@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace VirtualPet
 {
     class VPet
-    {
+    {   
 
         private string _name;
         public string Name
@@ -58,8 +58,6 @@ namespace VirtualPet
                 _boredom = value;
             }
         }
-
-
 
 
         public void Feed()
@@ -113,7 +111,7 @@ namespace VirtualPet
 
 
             Console.WriteLine(Name + "wants to play!");
-            Console.WriteLine("How rounds of mini golf will you play 1 or 2");
+            Console.WriteLine("How many rounds of mini golf will you play 1 or 2");
             int _play = int.Parse(Console.ReadLine());
             if (_play == 1)
             {
@@ -146,7 +144,7 @@ namespace VirtualPet
                 _thirst = _thirst + 10;
                 _boredom = _boredom + 40;
 
-                Console.WriteLine("What a good rest. May sure your pet has enought to eat and drink.\n Be sure to have some fun too!");
+                Console.WriteLine("What a good rest. May sure your pet has enought to eat and drink.\n\n Be sure to have some fun too!\n\n");
 
             }
             if (num >= 5 && num <= 9)
@@ -168,13 +166,13 @@ namespace VirtualPet
         }
         public void Status()
         {
-            Console.WriteLine("Hunger = {0}\n\nThirst = {1}\n\nBoredom = {2}", _hunger, _thirst, _boredom);
+            Console.WriteLine("\n       Hunger = {0}   Thirst = {1}   Boredom = {2}\n", _hunger, _thirst, _boredom);
 
             if (_hunger >= 25 && _hunger < 49)
             {
                 Console.WriteLine("DUDE FEED YOUR PET!");
             }
-            if (_hunger >= 50)
+            if (_hunger >= 75)
             {
                 Console.WriteLine("YOUR PET IS NOW VIRTUALLY DECEASED!");
                 Console.ReadKey();
@@ -183,22 +181,24 @@ namespace VirtualPet
             {
                 Console.WriteLine("YOU MAY WANT TO BUY THAT PET A PINT!");
             }
-            if (_thirst >= 50)
+            if (_thirst >= 75)
             {
                 Console.WriteLine("PET IS NOW SHRIVELED LIKE A HOT DOG LEFT\nON THE COALS TOO LONG");
                 Console.ReadKey();
             }
-            if (_boredom >= 25 && _boredom < 49)
+            if (_boredom >= 20 && _boredom < 49)
             {
-                Console.WriteLine("IS THERE ANYTHING TO DO AROUND HERE?");
+                Console.WriteLine("IS THERE ANYTHING TO DO AROUND HERE? GAHHH SO BORED!");
             }
-            if (_boredom >= 50)
+            if (_boredom >= 75)
             {
                 Console.WriteLine("YOUR PET HAS LEFT YOU FOR SOMEONE MORE FUN!");
                 Console.ReadKey();
 
             }
+        }
     }
+    
 }
 
     
