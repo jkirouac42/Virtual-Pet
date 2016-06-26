@@ -12,11 +12,12 @@ namespace VirtualPet
         {
             while (true)
             {
-                Console.WriteLine("\nTo feed your pet press 1         To Quench that thirst press 2\n");
-              
-                Console.WriteLine("\nTo play with your pet press 3    To check your pet's status press 4\n");
+                Console.WriteLine("        Select a number 1-5 to raise your Virtual Pet.\n");
+                Console.WriteLine("     \nBE SURE TO KEEP YOUR VIRTUAL PETS HUNGER, THIRST, AND BOREDOM LOW! ");
+
+                Console.WriteLine("\n      To FEED your pet press 1     To Quench that THIRST Press 2    \n\n      To PLAY with your pet Press 3    To check your pet's STATUS press 4\n");
                
-                Console.WriteLine("\nTo take your chances! 5\n");
+                Console.WriteLine("\n          OH NO MY PETS STATS ARE OUT OF CONTROL!!\n                TAKE A CHANCE AND PRESS 5!");
 
                 int choice = int.Parse(Console.ReadLine());
 
@@ -54,16 +55,16 @@ namespace VirtualPet
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to Virtual Pet\n");
+            Console.WriteLine("     Welcome to Virtual Pet\n");
             
            // VPet myPet = new VPet(); uneeded
             Console.WriteLine("Enter in a name for your new pet!\n");
             myPet.Name = Console.ReadLine();
-            Console.WriteLine("\nCongratulations! You have a new pet named {0}!\n", myPet.Name);
-            Console.WriteLine("                      @..@   ");
-            Console.WriteLine("                     (----)  ");
-            Console.WriteLine("                    (>____<) ");
-            Console.WriteLine("                    ^^ ~~ ^^   \n");
+            Console.WriteLine("\n      Congratulations! You have a new pet named {0}!\n", myPet.Name);
+            Console.WriteLine("                           @..@   ");
+            Console.WriteLine("                          (----)  ");
+            Console.WriteLine("                         (>____<) ");
+            Console.WriteLine("                         ^^ ~~ ^^   \n");
             
             myPet.Status();
             Menu();
@@ -72,3 +73,10 @@ namespace VirtualPet
         }
     }
 }
+
+
+/*
+Boredom is not showing up after 2 pints
+
+
+*/
