@@ -60,7 +60,7 @@ namespace VirtualPet
 
             Console.WriteLine("     Welcome to Virtual Pet\n");
             
-           // VPet myPet = new VPet(); uneeded
+          
             Console.WriteLine("Enter in a name for your new pet!\n");
             myPet.Name = Console.ReadLine();
             Console.WriteLine("\n      Congratulations! You have a new pet named {0}!\n", myPet.Name);
@@ -81,8 +81,3 @@ namespace VirtualPet
 }
 
 
-/*
-Boredom is not showing up after 2 pints
-
-
-*/

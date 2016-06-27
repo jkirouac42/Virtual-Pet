@@ -8,7 +8,6 @@ namespace VirtualPet
 {
     class VPet
     {   
-
         private string _name;
         public string Name
         {
@@ -22,6 +21,7 @@ namespace VirtualPet
             }
 
         }
+
         private int _hunger;
         public int Hunger
         {
@@ -34,6 +34,7 @@ namespace VirtualPet
                 _hunger = value;
             }
         }
+
         private int _thirst;
         public int Thirst
         {
@@ -46,6 +47,7 @@ namespace VirtualPet
                 _thirst = value;
             }
         }
+
         private int _boredom;
         public int Boredom
         {
@@ -60,18 +62,20 @@ namespace VirtualPet
         }
 
 
+
+
         public void Feed()
         {
 
             Console.WriteLine(Name + " is hungry\n");
-            Console.WriteLine("How much do you want to feed your pet: 1 or 2 scooby snacks.\n");
+            Console.WriteLine("How much do you want to feed your pet: 1 or 2 packets of crisps.\n");
             int scooby = int.Parse(Console.ReadLine());
             if (scooby == 1)
             {
                 _hunger = _hunger - 10;
                 _thirst = _thirst + 5;
                 _boredom = _boredom + 10;
-                Console.WriteLine("That was Scoobylicious! However now {0} is mad thirsty!\n", Name);
+                Console.WriteLine("That was brilliant! However now {0} is mad thirsty!\n", Name);
 
             }
             if (scooby == 2)
@@ -79,7 +83,7 @@ namespace VirtualPet
                 _hunger = _hunger - 25;
                 _thirst = _thirst + 10;
                 _boredom = _boredom + 15;
-                Console.WriteLine("That was Scoobylicious! However now {0} is mad thirsty!\n", Name);
+                Console.WriteLine("That was brilliant! However now {0} is mad thirsty!\n", Name);
             }
 
             Status();
@@ -89,7 +93,7 @@ namespace VirtualPet
         {
 
             Console.WriteLine(Name + " has a powerful thirst on.");
-            Console.WriteLine("How many pints 1 or 2");
+            Console.WriteLine("How about a Pan Galactic Gargle Blaster? 1 or 2");
             int drank = int.Parse(Console.ReadLine());
             if (drank == 1)
             {
@@ -111,14 +115,14 @@ namespace VirtualPet
 
 
             Console.WriteLine(Name + " wants to play!");
-            Console.WriteLine("How many rounds of mini golf will you play 1 or 2");
+            Console.WriteLine("How many Vogon poems will you avoid 1 or 2");
             int _play = int.Parse(Console.ReadLine());
             if (_play == 1)
             {
                 _boredom = _boredom - 10;
                 _hunger = _hunger + 10;
                 _thirst = _thirst + 15;
-                Console.WriteLine("That was great!");
+                Console.WriteLine("Thank goodness for infinate improbability drives!");
             }
 
             if (_play == 2)
@@ -126,7 +130,7 @@ namespace VirtualPet
                 _boredom = _boredom - 15;
                 _hunger = _hunger + 20;
                 _thirst = _thirst + 20;
-                Console.WriteLine("That was great! ");
+                Console.WriteLine("Thank goodness for infinate improbability drives!");
             }
 
             Status();
@@ -143,22 +147,20 @@ namespace VirtualPet
                 _hunger = _hunger + 5;
                 _thirst = _thirst + 3;
                 _boredom = _boredom + 10;
-
                 Console.WriteLine("Don't Panic!\n\n");
                 Status();
 
             }
-            if (num >= 5 && num <= 7)
+            if (num >= 5 && num <= 8)
             {
                 _hunger = _hunger + 15;
                 _thirst = _thirst + 10;
                 _boredom = _boredom + 5;
-
                 Console.WriteLine("Must be Thursday... I never got the hang of Thursdays.");
                 Status();
             }
 
-             if (num >= 8)
+             if (num >= 9)
             {
                 _hunger = 100;
                 _thirst = 100;
@@ -179,7 +181,7 @@ namespace VirtualPet
             if (_hunger >= 100)
             {
                 Console.WriteLine("YOUR PET IS NOW VIRTUALLY DECEASED!");
-                Console.ReadKey();
+                Thanks();
             }
             if (_thirst >= 25 && _hunger < 49)
             {
@@ -188,7 +190,7 @@ namespace VirtualPet
             if (_thirst >= 100)
             {
                 Console.WriteLine("\nPET IS NOW SHRIVELED LIKE A HOT DOG LEFT\nON THE COALS TOO LONG");
-                Console.ReadKey();
+                Thanks();
             }
             if (_boredom >= 25 && _boredom < 49)
             {
@@ -197,8 +199,22 @@ namespace VirtualPet
             if (_boredom >= 100)
             {
                 Console.WriteLine("YOUR PET HAS LEFT YOU FOR SOMEONE MORE FUN!");
-                Console.ReadKey();
+                Thanks();
+            }
 
+            if (_hunger < 0)
+            {
+                _hunger = 0;
+            }
+
+            if (_thirst < 0)
+            {
+                _thirst = 0;
+            }
+
+            if (_boredom < 0)
+            {
+                _boredom = 0;
             }
         }
         public void Thanks()
@@ -206,7 +222,8 @@ namespace VirtualPet
             Console.WriteLine("So long and thanks for all the fish\n");
             Console.WriteLine("Time is an illusion...lunchtime doubly so ~ Ford Prefect.");
             Console.ReadKey();
-            Thanks();
+
+            Environment.Exit(0);
         }
     }
     
