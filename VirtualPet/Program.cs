@@ -74,7 +74,6 @@ namespace VirtualPet
 
             myPet.Status();
             Menu();
-            
             Console.ReadKey();
         }
     }

@@ -69,8 +69,8 @@ namespace VirtualPet
 
             Console.WriteLine(Name + " is hungry\n");
             Console.WriteLine("How much do you want to feed your pet: 1 or 2 packets of crisps.\n");
-            int scooby = int.Parse(Console.ReadLine());
-            if (scooby == 1)
+            int crisps = int.Parse(Console.ReadLine());
+            if (crisps == 1)
             {
                 _hunger = _hunger - 10;
                 _thirst = _thirst + 5;
@@ -78,7 +78,7 @@ namespace VirtualPet
                 Console.WriteLine("That was brilliant! However now {0} is mad thirsty!\n", Name);
 
             }
-            if (scooby == 2)
+            if (crisps == 2)
             {
                 _hunger = _hunger - 25;
                 _thirst = _thirst + 10;
