@@ -22,7 +22,7 @@ namespace VirtualPet
 
                 int choice = int.Parse(Console.ReadLine());
 
-                myPet.Tick();
+               // myPet.Tick();
 
                 if (choice == 1)
                 {
