@@ -12,13 +12,17 @@ namespace VirtualPet
         {
             while (true)
             {
-                
 
-                Console.WriteLine("\nTo FEED your pet press 1\n\nTo Quench that THIRST Press 2\n\n To PLAY with your pet Press 3\n\nTo check your pet's STATUS press 4\n");
-               
-                Console.WriteLine("\nOH NO MY PETS STATS ARE OUT OF CONTROL!! TAKE A CHANCE AND PRESS 5!\n\n\n");
+
+                Console.WriteLine("Select 1 to FEED your pet.");
+                Console.WriteLine("Select 2 to quench you pets Thirst.");
+                Console.WriteLine("Select 3 to PLAY with your pet.");
+                Console.WriteLine("Select 4 to check your pets STATUS.");
+                Console.WriteLine("Select 5 to take a chance if your pets stats are OUT OF CONTROL.\n");
 
                 int choice = int.Parse(Console.ReadLine());
+
+                myPet.Tick();
 
                 if (choice == 1)
                 {

@@ -140,21 +140,21 @@ namespace VirtualPet
 
             if (num <= 4)
             {
-                _hunger = 0;
-                _thirst = 0;
-                _boredom = 0;
+                _hunger = _hunger + 5;
+                _thirst = _thirst + 3;
+                _boredom = _boredom + 10;
 
-                Console.WriteLine("Hey! That gamble sure paid off!!\n\n");
+                Console.WriteLine("Don't Panic!\n\n");
                 Status();
 
             }
             if (num >= 5 && num <= 7)
             {
-                _hunger = 50;
-                _thirst = 50;
-                _boredom = 50;
+                _hunger = _hunger + 15;
+                _thirst = _thirst + 10;
+                _boredom = _boredom + 5;
 
-                Console.WriteLine("What a good rest. May sure your pet has enought to eat and drink.\n Be sure to have some fun too!");
+                Console.WriteLine("Must be Thursday... I never got the hang of Thursdays.");
                 Status();
             }
 
@@ -163,8 +163,8 @@ namespace VirtualPet
                 _hunger = 100;
                 _thirst = 100;
                 _boredom = 100;
-                Console.WriteLine("VIRTUAL PET APOCALYPSE!!! {0} IS NOW UNDEAD!!!", Name);
-                Console.ReadKey();
+                Console.WriteLine("Vogon constructor fleet has arrived. Grab your towel and hitch a ride.", Name);
+                Thanks();
             }
             
         }
@@ -200,6 +200,13 @@ namespace VirtualPet
                 Console.ReadKey();
 
             }
+        }
+        public void Thanks()
+        {
+            Console.WriteLine("So long and thanks for all the fish\n");
+            Console.WriteLine("Time is an illusion...lunchtime doubly so ~ Ford Prefect.");
+            Console.ReadKey();
+            Thanks();
         }
     }
     
