@@ -18,11 +18,10 @@ namespace VirtualPet
                 Console.WriteLine("Select 2 to quench you pets Thirst.");
                 Console.WriteLine("Select 3 to PLAY with your pet.");
                 Console.WriteLine("Select 4 to check your pets STATUS.");
-                Console.WriteLine("Select 5 to take a chance if your pets stats are OUT OF CONTROL.\n");
-
+                Console.WriteLine("\nSelect 5 to visit the Restaurant at the\nEnd of the Universe.");
                 int choice = int.Parse(Console.ReadLine());
 
-               // myPet.Tick();
+            
 
                 if (choice == 1)
                 {
