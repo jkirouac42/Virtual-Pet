@@ -73,20 +73,21 @@ namespace VirtualPet
             if (crisps == 1)
             {
                 _hunger = _hunger - 10;
-                _thirst = _thirst + 5;
+                _thirst = _thirst + 15;
                 _boredom = _boredom + 10;
                 Console.WriteLine("That was brilliant! However now {0} is mad thirsty!\n", Name);
-
+                
             }
             if (crisps == 2)
             {
                 _hunger = _hunger - 25;
-                _thirst = _thirst + 10;
+                _thirst = _thirst + 20;
                 _boredom = _boredom + 15;
                 Console.WriteLine("That was brilliant! However now {0} is mad thirsty!\n", Name);
             }
 
             Status();
+            
 
         }
         public void Drink()
@@ -100,7 +101,7 @@ namespace VirtualPet
                 _thirst = _thirst - 10;
                 _boredom = _boredom + 15;
                 Console.WriteLine("That was great! Now {0} has a lot of energy. Must be playtime", Name);
-
+                
             }
             if (drank == 2)
             {
@@ -120,16 +121,19 @@ namespace VirtualPet
             if (_play == 1)
             {
                 _boredom = _boredom - 10;
-                _hunger = _hunger + 10;
-                _thirst = _thirst + 15;
-                Console.WriteLine("Thank goodness for infinate improbability drives!");
+                _hunger = _hunger + 15;
+                _thirst = _thirst + 20;
+                Console.WriteLine("Thank goodness for infinite improbability drives!");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadKey();
+                
             }
 
             if (_play == 2)
             {
                 _boredom = _boredom - 15;
-                _hunger = _hunger + 20;
-                _thirst = _thirst + 20;
+                _hunger = _hunger + 25;
+                _thirst = _thirst + 25;
                 Console.WriteLine("Thank goodness for infinate improbability drives!");
             }
 
@@ -141,6 +145,15 @@ namespace VirtualPet
             Random random = new Random();
 
             int num = random.Next(1, 10);
+
+            
+
+
+            if (_hunger < 50 && _thirst < 50 && _boredom < 30)
+            {
+                Status();
+            }
+
 
             if (num <= 4)
             {
@@ -174,28 +187,69 @@ namespace VirtualPet
         {
             Console.WriteLine("\n        Status: Hunger = {0}   Thirst = {1}   Boredom = {2}\n", _hunger, _thirst, _boredom);
 
-            if (_hunger >= 25 && _hunger < 49)
+            if (_hunger >= 25 && _hunger <= 49)
             {
                 Console.WriteLine("DUDE FEED YOUR PET!");
             }
+
+            if (_hunger >= 50 && _hunger <= 55 && _hunger <= 80)
+            {
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Tick();
+            }
+
             if (_hunger >= 100)
             {
                 Console.WriteLine("YOUR PET IS NOW VIRTUALLY DECEASED!");
                 Thanks();
+
             }
-            if (_thirst >= 25 && _hunger < 49)
+            if (_thirst >= 25 && _hunger <= 49)
             {
                 Console.WriteLine("\nYOU MAY WANT TO BUY THAT PET A PINT!");
             }
+
+
+            if (_thirst >= 50 && _thirst <= 55 && _thirst <= 80)
+            {
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Tick();
+            }
+
             if (_thirst >= 100)
             {
-                Console.WriteLine("\nPET IS NOW SHRIVELED LIKE A HOT DOG LEFT\nON THE COALS TOO LONG");
+                Console.WriteLine("\nYour pet has been destroyed to make way for an interstellar bypass.");
                 Thanks();
             }
-            if (_boredom >= 25 && _boredom < 49)
+            if (_boredom >= 25 && _boredom <= 49)
             {
                 Console.WriteLine("IS THERE ANYTHING TO DO AROUND HERE? GAHHH SO BORED!\n");
             }
+
+            if (_boredom >= 50 && _boredom <= 55 && _boredom <= 80 )
+            {
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Console.WriteLine("INFINITE IMPROBABILITY");
+                Tick();
+            }
+
             if (_boredom >= 100)
             {
                 Console.WriteLine("YOUR PET HAS LEFT YOU FOR SOMEONE MORE FUN!");
